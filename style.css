@@ -1,0 +1,88 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding-top: 0;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: url("assets/images/inicio-1.webp") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-section .container {
+  z-index: 2;
+}
+
+.hero-section h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.project-card {
+  min-height: 400px;
+}
+
+.project-card .row {
+  height: 100%;
+}
+
+.project-image-horizontal {
+  object-fit: contain;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.project-carousel {
+  position: relative;
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+.modal-carousel .carousel-item img {
+  max-height: 90vh;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .project-card .col-md-6 {
+    height: 400px;
+  }
+}
+
+.js-animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.js-animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
