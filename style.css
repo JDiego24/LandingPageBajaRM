@@ -17,7 +17,7 @@ body {
 
 .hero-section {
   min-height: 100vh;
-  background: url("assets/images/inicio-1.webp") no-repeat center center;
+  background: url("/inicio-1.webp") no-repeat center center;
   background-size: cover;
   position: relative;
 }
